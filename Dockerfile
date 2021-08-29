@@ -8,7 +8,7 @@ FROM registry.access.redhat.com/ubi8/ubi:8.3
 
 RUN dnf install -y java-11-openjdk.x86_64 && dnf clean all
 
-WORKDIR .
+WORKDIR /
 
 COPY --from=builder /home/gradle/build/libs/server.jar ./server.jar
 
